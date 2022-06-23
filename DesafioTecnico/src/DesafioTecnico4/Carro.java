@@ -14,18 +14,48 @@ package DesafioTecnico4;
 //        Implementação da classe base Carro
 
 
-//public class Carro
-//{
-////    public Carro()
-////    {
-////        this.Modelo = "";
-////        this.Marca = "";
-////    }
-////    public Carro(String modelo, String marca)
-////    {
-////        this.Modelo = modelo;
-////        this.Marca = marca;
-////    }
-////    //public String Modelo { get; set; }
-////    //public String Marca { get; set; }
-////}
+public class Carro
+{
+
+    private String Modelo;
+    private String Marca;
+    private String tipoCombustivel;
+
+
+    public Carro()
+    {
+        this.Modelo = "";
+        this.Marca = "";
+        this.tipoCombustivel="";
+    }
+    public Carro(String modelo, String marca, String tipoCombustivel)
+    {
+        this.Modelo = modelo;
+        this.Marca = marca;
+        this.tipoCombustivel= tipoCombustivel;
+    }
+
+    public String getModelo() {
+        return Modelo;
+    }
+
+    public String getMarca() {
+        return Marca;
+    }
+
+    public void setModelo(String modelo) {
+        Modelo = modelo;
+    }
+
+    public void setMarca(String marca) {
+        Marca = marca;
+    }
+
+    public String getTipoCombustivel() {
+        return tipoCombustivel;
+    }
+
+    public void setTipoCombustivel(String tipoCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
+    }
+}
