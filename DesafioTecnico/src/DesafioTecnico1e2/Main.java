@@ -1,4 +1,4 @@
-package DesafioTecnico1;
+package DesafioTecnico1e2;
 
 //1. (Vale 3 Pontos) Considerando os conceitos de Orientação a Objetos, crie
 //        uma classe abstrata Pai de nome Conta com os seguintes atributos
@@ -12,6 +12,15 @@ package DesafioTecnico1;
 //        ContaPoupanca, adicione no mínimo um valor para cada atributo e imprima cada
 //        conta (ContaCorrente e ContaPoupanca) com seus devidos rendimentos.
 //        Obs: Encapsular atributos das classes.
+
+
+//2. (Vale 2 pontos) Aproveitando o seu código já escrito na questão 1, crie uma
+//interface chamada Imposto que contenha o método alcularImposto() e
+//        implemente ela em ContaCorrente e ContaPoupanca com a seguinte regra:
+//        ⦁ Para ContaCorrente, o método calcularImposto() deve retornar o rendimento *
+//        25%;
+//        ⦁ Para ContaPoupanca, o método calcularImposto() deve retornar o rendimento
+//        10%;
 
 import java.text.DecimalFormat;
 
@@ -34,9 +43,16 @@ public class Main {
         corrente2.setSaldo(5076.32);
 
         System.out.println("O rendimento da conta corrente foi: R$ "+format.format(corrente1.rendimento()));
+        System.out.println("Imposto sobreo rendimento:"+format.format(corrente1.calcularImposto(corrente1.getSaldo())));
+        System.out.println();
         System.out.println("O rendimento da conta corrente foi: R$ "+format.format(corrente2.rendimento()));
+        System.out.println("Imposto sobreo rendimento:"+format.format(corrente2.calcularImposto(corrente2.getSaldo())));
+        System.out.println();
         System.out.println("O rendimento da conta poupança foi: R$ "+format.format(poupanca1.rendimento()));
+        System.out.println("Imposto sobreo rendimento:"+format.format(poupanca1.calcularImposto(poupanca1.getSaldo())));
+        System.out.println();
         System.out.println("O rendimento da conta poupança foi: R$ "+format.format(poupanca2.rendimento()));
+        System.out.println("Imposto sobreo rendimento:"+format.format(poupanca2.calcularImposto(poupanca2.getSaldo())));
 
     }
 }

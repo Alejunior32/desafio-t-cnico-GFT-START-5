@@ -1,6 +1,6 @@
-package DesafioTecnico1;
+package DesafioTecnico1e2;
 
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements Imposto{
 
     public ContaPoupanca() {
     }
@@ -11,5 +11,10 @@ public class ContaPoupanca extends Conta{
 
     public double rendimento() {
         return (getSaldo()*0.05)+getSaldo();
+    }
+
+    @Override
+    public double calcularImposto(double saldo) {
+        return rendimento()*0.10;
     }
 }

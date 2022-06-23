@@ -1,6 +1,6 @@
-package DesafioTecnico1;
+package DesafioTecnico1e2;
 
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Imposto {
 
     public ContaCorrente() {
     }
@@ -11,5 +11,10 @@ public class ContaCorrente extends Conta{
 
     public double rendimento() {
         return (getSaldo()*0.03)+getSaldo();
+    }
+
+
+    public double calcularImposto(double saldo) {
+        return rendimento()*0.25;
     }
 }
